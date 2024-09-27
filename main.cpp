@@ -1,4 +1,5 @@
 #include <wx/wx.h>
+#include <libMultiMarkdown.h>
 
 class MyApp : public wxApp
 {

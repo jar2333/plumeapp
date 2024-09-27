@@ -39,4 +39,7 @@ else()
     add_executable(main WIN32 ${SRCS} main.exe.manifest)
 endif()
 
+# Add the MultiMarkdown include directory
+target_include_directories(main PRIVATE ${multimarkdown_SOURCE_DIR}/src)
+
 target_link_libraries(main PRIVATE wxcore wxnet libMultiMarkdown)
