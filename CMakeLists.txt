@@ -9,14 +9,20 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(wxBUILD_SHARED OFF)
 
-message(STATUS "Fetching wxWidgets...")
-
 FetchContent_Declare(
    wxWidgets
    GIT_REPOSITORY https://github.com/wxWidgets/wxWidgets.git
    GIT_SHALLOW ON
 )
-FetchContent_MakeAvailable(wxWidgets)
+
+FetchContent_Declare(
+   MultiMarkdown
+   GIT_REPOSITORY https://github.com/fletcher/MultiMarkdown-6.git
+   GIT_SHALLOW ON
+)
+
+message(STATUS "Fetching wxWidgets and libMultiMarkdown...")
+FetchContent_MakeAvailable(wxWidgets MultiMarkdown)
 
 set(SRCS main.cpp)
 
@@ -33,4 +39,4 @@ else()
     add_executable(main WIN32 ${SRCS} main.exe.manifest)
 endif()
 
-target_link_libraries(main PRIVATE wxcore wxnet)
+target_link_libraries(main PRIVATE wxcore wxnet libMultiMarkdown)
