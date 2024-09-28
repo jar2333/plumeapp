@@ -1,3 +1,5 @@
+A cross-platform desktop app written in C++ with wxWidgets, built with CMake.
+
 Download, build and statically link wxWidgets as the GUI library for your C++ project!
 
 [![Video](/output.gif)](https://www.youtube.com/watch?v=zjNg5HdgNO0)
