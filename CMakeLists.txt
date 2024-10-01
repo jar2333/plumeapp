@@ -56,16 +56,25 @@ target_include_directories(
 target_link_libraries(main PRIVATE wxcore wxnet libMultiMarkdown)
 
 target_compile_options(main PRIVATE
-    -Wall 
-    -Wextra 
-    -Werror 
-    -Wpedantic 
-    -Wshadow 
-    -Wnon-virtual-dtor 
-    -Wcast-align 
-    -Wunused 
-    -Woverloaded-virtual 
-    -Wnull-dereference 
-    -Wdouble-promotion
-    -g3 
+    $<$<CONFIG:Debug>:
+        -Wall 
+        -Wextra 
+        -Werror 
+        -Wpedantic 
+        -Wshadow 
+        -Wnon-virtual-dtor 
+        -Wcast-align 
+        -Wunused 
+        -Woverloaded-virtual 
+        -Wnull-dereference 
+        -Wdouble-promotion
+        -Wreturn-type
+        -g3 
+        -O0
+    >
+    $<$<CONFIG:Release>:
+        -Wall 
+        -Wpedantic 
+        -O2
+    >
 )
