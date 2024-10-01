@@ -38,3 +38,4 @@ build-dbg
 
 # IDE
 .vscode
+.cache
