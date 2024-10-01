@@ -35,3 +35,6 @@
 build
 build-dbg
 .DS_Store
+
+# IDE
+.vscode
