@@ -30,7 +30,13 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(wxWidgets MultiMarkdown googletest)
 
-set(SRCS src/main.cpp)
+set(SRCS src/App.cpp src/Frame.cpp)
+
+# Add the MultiMarkdown include directory
+include_directories(
+    ${PROJECT_SOURCE_DIR}/include
+    ${multimarkdown_SOURCE_DIR}/src
+)
 
 if(APPLE)
     # create bundle on apple compiles
@@ -44,14 +50,6 @@ else()
     # so it works on all platforms
     add_executable(main WIN32 ${SRCS} main.exe.manifest)
 endif()
-
-# Add the MultiMarkdown include directory
-target_include_directories(
-    main 
-    PRIVATE 
-    ${PROJECT_SOURCE_DIR}/include
-    ${multimarkdown_SOURCE_DIR}/src
-)
 
 target_link_libraries(main PRIVATE wxcore wxnet libMultiMarkdown)
 
