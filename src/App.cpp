@@ -1,4 +1,3 @@
-#include <wx/wx.h>
 #include <libMultiMarkdown.h>
 
 #include <Frame.hpp>

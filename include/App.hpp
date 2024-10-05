@@ -1,6 +1,6 @@
 #pragma once
 
-#include <wx/wx.h>
+#include <wx/app.h>
 
 class App : public wxApp {
     private:

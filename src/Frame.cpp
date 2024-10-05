@@ -1,3 +1,5 @@
+#include <wx/stattext.h>
+
 #include <Frame.hpp>
 
 Frame::Frame(
