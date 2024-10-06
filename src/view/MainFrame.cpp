@@ -1,8 +1,10 @@
+#include <wx/gdicmn.h>
 #include <wx/stattext.h>
+#include <wx/string.h>
 
-#include <Frame.hpp>
+#include <MainFrame.hpp>
 
-Frame::Frame(
+MainFrame::MainFrame(
     const wxString &title, 
     const wxPoint &pos, 
     const wxSize &size

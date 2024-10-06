@@ -1,13 +1,13 @@
 #include <libMultiMarkdown.h>
 
-#include <Frame.hpp>
+#include <MainFrame.hpp>
 #include <App.hpp>
 
 
 wxIMPLEMENT_APP(App);
 
 bool App::OnInit() {
-    frame = new Frame("Hello Everyone!", wxDefaultPosition, wxDefaultSize);
+    frame = new MainFrame("Hello Everyone!", wxDefaultPosition, wxDefaultSize);
     frame->Show(true);
     return true;
 }

@@ -30,7 +30,7 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(wxWidgets MultiMarkdown googletest)
 
-set(SRCS src/App.cpp src/Frame.cpp)
+set(SRCS src/App.cpp src/view/MainFrame.cpp)
 
 # Add the MultiMarkdown include directory
 include_directories(
